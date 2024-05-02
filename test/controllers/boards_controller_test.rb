@@ -10,4 +10,9 @@ class BoardsControllerTest < ActionDispatch::IntegrationTest
     get boards_show_url
     assert_response :success
   end
+
+  test "should get create" do
+    get boards_create_url
+    assert_response :success
+  end
 end

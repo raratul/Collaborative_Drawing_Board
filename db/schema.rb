@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_01_122824) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_02_180115) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,11 +22,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_01_122824) do
 
   create_table "drawings", force: :cascade do |t|
     t.bigint "board_id", null: false
-    t.text "data"
+    t.bigint "user_id", null: false
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_drawings_on_board_id"
+    t.index ["user_id"], name: "index_drawings_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "drawings", "boards"
+  add_foreign_key "drawings", "users"
 end
