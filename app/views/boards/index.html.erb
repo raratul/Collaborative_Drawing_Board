@@ -1,2 +1,19 @@
-<h1>Boards#index</h1>
-<p>Find me in app/views/boards/index.html.erb</p>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center">
+    <%= form_with url: boards_create_path, method: :post, class: "mb-4" do |f| %>
+      <div class="form-group">
+        <%= f.label :nickname, "Enter Nickname:", class: "form-label" %>
+        <br>
+        <%= f.text_field :nickname, class: "form-control" %>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Enter</button>
+    <% end %>
+  </div>
+</div>
+
+<% @boards.each do |board| %>
+  <div>
+    <%= link_to board.name, boards_show_path(id: board.id, user_id: @user.id), class: "btn btn-secondary mt-2" %>
+  </div>
+<% end %>
