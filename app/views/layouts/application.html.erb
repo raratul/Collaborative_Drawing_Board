@@ -3,14 +3,16 @@
 <head>
   <title>Collaborative Drawing Board</title>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-track': 'reload' %>
- 
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
 </head>
+
 <body>
-
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>

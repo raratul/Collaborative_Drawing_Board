@@ -8,5 +8,6 @@ class BoardChannel < ApplicationCable::Channel
     user = User.find(data['user_id'])
     drawing = Drawing.create(content: data['content'], board: board, user: user)
     BoardChannel.broadcast_to(board, drawing: drawing)
+    ActionCable.server.broadcast "board_channel", data
   end
 end
