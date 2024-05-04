@@ -1,13 +1,13 @@
-import consumer from "./consumer";
+// import consumer from "./consumer";
 
-consumer.subscriptions.create({ channel: "BoardChannel", board_id: window.boardId }, {
-  connected() {
+// consumer.subscriptions.create({ channel: "BoardChannel", board_id: window.boardId }, {
+//   connected() {
 
-  },
+//   },
 
-  disconnected() {
-  },
+//   disconnected() {
+//   },
 
-  received(data) {
-  }
-});
+//   received(data) {
+//   }
+// });
