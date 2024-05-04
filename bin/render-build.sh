@@ -9,8 +9,6 @@ bundle exec rails assets:precompile
 bundle exec rails assets:clean
 bundle exec rails
 
-npm install package.json
-
 bin/rails db:environment:set RAILS_ENV=production 
 rake DISABLE_DATABASE_ENVIRONMENT_CHECK=1 db:migrate:reset
 RAILS_ENV=test rake db:migrate
