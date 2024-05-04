@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collaborative Drawing Board</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     #drawing-canvas {
       border: 1px solid #000;
@@ -45,5 +43,6 @@
 
 
   <%= javascript_include_tag 'drawing' %>
+  <%= action_cable_meta_tag %>
 </body>
 </html>
