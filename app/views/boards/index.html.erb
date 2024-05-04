@@ -1,7 +1,7 @@
 <h1 class="container d-flex justify-content-center pt-5">Collaborative Drawing Board</h1>
 <div class="container d-flex justify-content-center align-items-center vh-100 pb-5">
   <div class="text-center">
-    <%= form_with url: boards_create_path, method: :post, class: "mb-4" do |f| %>
+    <%= form_with url: boards_path, method: :post, class: "mb-4" do |f| %>
       <div class="form-group">
         <%= f.label :nickname, "Enter Nickname:", class: "form-label" %>
         <br>
