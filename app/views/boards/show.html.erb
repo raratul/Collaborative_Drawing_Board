@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborative Drawing Board</title>
+  <style>
+    #drawing-canvas {
+      border: 1px solid #000;
+      display: block;
+      margin: 0 auto;
+    }
+    .color-picker p {
+      margin-top: 10px;
+    }
+    .tools p {
+      margin-top: 10px;
+    }
+    .tools button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="drawing-canvas" width="1500" height="600"></canvas>
+
+  <div class="row">
+    <p class="col mt-3 color-picker">Color <input type="color" id="element-color" value="#FF0000"></p>
+    <div class="col row tools">
+      <p class="col mt-3">Tools: 
+        <button id="pen" class="btn btn-primary">Pen</button>
+        <button id="erase" class="btn btn-primary">Eraser</button>
+        <button id="rectangle" class="btn btn-primary">Rectangle</button>
+        <button id="circle" class="btn btn-primary">Circle</button>
+      </p>
+    </div>
+  </div>
+    
+  <div class="row">
+    <button id="clear" class="col btn btn-danger mt-3 me-3">Clear Canvas</button>
+    <button id="export" class="col btn btn-success mt-3">Export as JPEG</button>
+  </div>
+
+
+  <%= javascript_include_tag 'drawing' %>
+</body>
+</html>
