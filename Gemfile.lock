@@ -241,7 +241,6 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  actioncable (~> 7.0)
   bootsnap
   capybara
   cssbundling-rails
