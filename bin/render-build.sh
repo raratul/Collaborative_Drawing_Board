@@ -4,6 +4,8 @@ set -o errexit
 
 chmod +x bin/rails
 
+bundle update rake
+
 bundle install
 bundle exec rails assets:precompile
 bundle exec rails assets:clean

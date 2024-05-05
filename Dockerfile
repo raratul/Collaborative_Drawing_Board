@@ -78,3 +78,6 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
+
+RUN gem update --system 2.6.12
+RUN gem install bundler --version 1.14.6
