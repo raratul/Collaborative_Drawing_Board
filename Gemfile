@@ -20,6 +20,7 @@ gem "puma"
 gem "jsbundling-rails"
 
 gem "importmap-rails"
+gem 'rake'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
