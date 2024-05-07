@@ -14,7 +14,6 @@
     "gry": "~6.0.0",
     "nodemon": "^3.1.0",
     "package.json": "^2.0.1",
-    "parse-url": "~6.0.1",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "sass": "^1.76.0"
